@@ -6,16 +6,19 @@ import { useState } from 'react';
 function MyComponent() {
   return (
     <div className="my-component">
-      <h1>Tipos de componentes!</h1>
+      <h1>Componentes</h1>
+      <p>Em React, um componente é uma unidade independente e reutilizável da interface do usuário, que pode ser combinada para formar aplicações complexas. Os componentes podem ser definidos como funções ou classes. As propriedades, ou props, são dados passados de um componente pai para um componente filho, permitindo a configuração e reutilização dos componentes. As props são imutáveis, ou seja, o componente filho não pode alterá-las. O estado, por outro lado, é gerenciado internamente por um componente e pode ser modificado durante a vida útil do componente. O estado permite que um componente reaja às mudanças de dados, como a entrada do usuário ou respostas de APIs. </p>
+      <h2>Tipos de componentes</h2>
     </div>
   );
 }
+
 // Componente de Função
 function FunctionComponent() {
   return (
     <div className="function-component">
       <h2>Componente de Função</h2>
-      <p>Os componentes de função em React são funções JavaScript que retornam elementos React. São ideais para criar componentes simples e reutilizáveis, pois não possuem estado interno nem métodos de ciclo de vida. Eles são fáceis de entender e testar, sendo uma escolha comum para partes da interface do usuário baseadas em entrada de dados.</p>
+      <p>Um componente de função em React é uma função JavaScript que retorna elementos React, tipicamente escritos em JSX. Eles são ideais para criar componentes simples e reutilizáveis, já que inicialmente não possuíam estado interno nem métodos de ciclo de vida. No entanto, com a introdução dos Hooks no React 16.8, é possível adicionar estado e outras funcionalidades a esses componentes. Componentes de função são mais simples, fáceis de entender e geralmente oferecem melhor performance. Eles são uma escolha comum para partes da interface do usuário que baseiam-se na entrada de dados e renderização simples.</p>
     </div>
   );
 }
@@ -34,7 +37,7 @@ class ClassComponent extends React.Component {
   }
 }
 
-//Componenete JSX
+//Componente JSX
 function JSXComponent() {
   const message = "Componente JSX";
 
@@ -65,7 +68,7 @@ function RenderizacaoCondicional() {
       <p>
         Renderização condicional é a prática de renderizar diferentes elementos ou componentes dependendo de alguma condição. No exemplo abaixo, uma mensagem de "Bom dia!" ou "Boa tarde!" é exibida dependendo da variável <strong>isMorning</strong>.
       </p>
-      <h2>{isMorning ? 'Bom dia!' : 'Boa tarde!'}</h2>
+      <p className='exemplos-component-jsx'>{isMorning ? 'Bom dia!' : 'Boa tarde!'}</p>
     </div>
   );
 }
@@ -117,7 +120,7 @@ function ExibindoDados() {
       <p>
         Dados podem ser exibidos em JSX usando chaves <strong>{'{}'}</strong>. No exemplo abaixo, o nome armazenado na variável <strong>name</strong> é exibido.
       </p>
-      <h2>Hello, {name}!</h2>
+      <p className='exemplos-component-jsx'>Hello, {name}!</p>
     </div>
   );
 }
@@ -148,7 +151,7 @@ function AtualizandoTela() {
         O estado de um componente pode ser atualizado usando o hook <strong>useState</strong>. No exemplo abaixo, um contador é atualizado cada vez que o botão é clicado.
       </p>
       <div>
-      <p>Você clicou {count} vezes</p>
+        <p>Você clicou {count} vezes</p>
         <button onClick={() => setCount(count + 1)}>Click me</button>
       </div>
     </div>
@@ -165,7 +168,7 @@ function CompartilhandoDadosEntreComponentes() {
         Dados podem ser passados de um componente pai para um componente filho através de props. No exemplo abaixo, o componente pai passa uma mensagem para o componente filho.
       </p>
       <div>
-        <h2>Componente Pai</h2>
+        <p className='exemplos-component-jsx'>Componente Pai</p>
         <ComponenteFilho message={message} />
       </div>
     </div>
@@ -174,7 +177,7 @@ function CompartilhandoDadosEntreComponentes() {
 
 
 function ComponenteFilho({ message }) {
-  return <h2>{message}</h2>;
+  return <p  className='exemplos-component-jsx'>{message}</p>;
 }
 
 // JSX Container
@@ -187,7 +190,7 @@ class JSXContainer extends React.Component {
           Em React, um componente é uma representação de um elemento da interface do usuário. Ele é escrito usando JSX, uma sintaxe semelhante ao HTML, onde as tags precisam ser fechadas, como {`<br />`}. Quando você cria um componente, é importante notar que ele não pode retornar várias tags JSX diretamente. Em vez disso, você precisa envolvê-las em um elemento pai compartilhado, como um wrapper {`<div>...</div>`}, mesmo que esse wrapper esteja vazio.
         </p>
         <div className='usabilidade-jsx'>
-          <h3>Exemplos com JSX</h3>
+          <h2>Exemplos com JSX</h2>
           <RenderizacaoCondicional />
           <RenderizacaoDeListas />
           <AdicionandoEstilos />

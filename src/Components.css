@@ -1,12 +1,29 @@
-/* Components.css */
-
-/* Estilos para o componente HelloWorld */
-.my-component {
-  font-size: 17px;
+/* Estilos para todos os parágrafos */
+p {
+  font-size: 19px;
 }
 
-.my-component h1 {
+/* Estilos para todos os títulos h2 */
+h2 {
+  font-size: 30px;
+}
+
+/* Estilos para o título h1 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: rgb(0, 71, 88);
+}
+/* Estilos para o componente my-component */
+.my-component {
+  padding: 10px;
+  margin-bottom: 3%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Estilos para o componente FunctionComponent */
@@ -21,16 +38,6 @@
   margin-right: auto;
 }
 
-.function-component h2 {
-  font-size: 24px;
-  color: rgb(0, 71, 88);
-}
-
-.function-component p {
-  font-size: 17px;
-  color: #000000;
-}
-
 /* Estilos para o componente ClassComponent */
 .class-component {
   background-color: #f0f0f0;
@@ -40,16 +47,6 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-}
-
-.class-component h2 {
-  font-size: 24px;
-  color: rgb(0, 71, 88);
-}
-
-.class-component p {
-  font-size: 17px;
-  color: #000000;
 }
 
 /* Estilos para o novo componente JSXComponent */
@@ -63,16 +60,6 @@
   margin-right: auto;
 }
 
-.jsx-component h2 {
-  font-size: 24px;
-  color: rgb(0, 71, 88);
-}
-
-.jsx-component p {
-  font-size: 17px;
-  color: #000000;
-}
-
 /* Estilos para o novo componente JSXContainer */
 hr {
   background-color: #6177a1;
@@ -83,52 +70,29 @@ hr {
 
 .JSX-container {
   display: flex;
-  padding: 3%;
+  padding: 2%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
 
-.JSX-container h1 {
-  font-size: 6vh;
-  color: rgb(0, 71, 88);
-}
-
-.JSX-container p {
-  font-size: 20px;
-  color: #000000;
-}
-
 .usabilidade-jsx {
   display: flex;
   flex-direction: column;
-  gap: 20px; 
+  gap: 20px;
   width: 100%;
   max-width: 1200px;
   padding: 20px;
   align-items: center;
 }
 
-.usabilidade-jsx h3 {
-  color: #005f6b;
-}
-.usabilidade-jsx > div {
+.usabilidade-jsx> div {
   background-color: #f0f0f0;
-  width: 100%; 
+  width: 100%;
   border: 1px solid #ddd;
   padding: 16px;
   text-align: left;
-}
-
-.usabilidade-jsx h2 {
-  font-size: 3vh;
-  color: #005f6b;
-}
-
-.usabilidade-jsx p {
-  font-size: 18px;
-  line-height: 1.5;
 }
 
 .usabilidade-jsx ul {
@@ -138,8 +102,8 @@ hr {
 }
 
 .usabilidade-jsx ul li::marker {
-  color: #005f6b; /* Define a cor das bolinhas */
-  margin-right: 5px; /* Adiciona um espaçamento à direita para separar a bolinha do texto */
+  color: #005f6b;
+  margin-right: 5px;
 }
 
 .usabilidade-jsx button {
@@ -154,3 +118,7 @@ hr {
   background-color: #00434a;
 }
 
+.exemplos-component-jsx {
+  color: rgb(0, 71, 88);
+  font-weight: bold;
+}
