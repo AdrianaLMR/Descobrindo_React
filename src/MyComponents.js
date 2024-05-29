@@ -3,6 +3,21 @@ import React from 'react';
 import './Components.css';
 import { useState } from 'react';
 
+function ReactExplanation() {
+  return (
+    <div className="component-react">
+      <h1>O que é React?</h1>
+      <p>
+        React é uma biblioteca JavaScript para construção de interfaces de usuário interativas e dinâmicas. Desenvolvida pelo Facebook, é amplamente utilizada para criar aplicações web de página única (SPA, Single Page Applications).
+      </p>
+      <h2>Virtual DOM</h2>
+      <p>
+        React usa um conceito chamado Virtual DOM, uma representação leve da estrutura do DOM real. Quando o estado de um componente muda, o Virtual DOM é atualizado primeiro. Em seguida, o React compara a diferença entre o Virtual DOM e o DOM real e atualiza apenas as partes necessárias, tornando o processo de atualização da interface mais eficiente.
+      </p>
+    </div>
+  );
+}
+
 function MyComponent() {
   return (
     <div className="my-component">
@@ -31,6 +46,7 @@ class ClassComponent extends React.Component {
         <h2>Componente de Classe</h2>
         <p>
           Os componentes de classe em React são definidos como classes que estendem React.Component. Possuem estado interno e métodos de ciclo de vida, sendo mais adequados para componentes complexos que exigem gerenciamento de estado e lógica de renderização personalizada. Oferecem maior flexibilidade e funcionalidades, mas são mais verbosos que os componentes de função.
+          Componentes de classe possuem métodos de ciclo de vida que permitem executar código em momentos específicos do ciclo de vida do componente, como quando ele é montado, atualizado ou desmontado.
         </p>
       </div>
     );
@@ -205,4 +221,4 @@ class JSXContainer extends React.Component {
 }
 
 
-export { FunctionComponent, ClassComponent, MyComponent, JSXComponent, JSXContainer };
+export { ReactExplanation, FunctionComponent, ClassComponent, MyComponent, JSXComponent, JSXContainer };

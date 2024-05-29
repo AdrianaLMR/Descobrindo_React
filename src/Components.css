@@ -18,7 +18,7 @@ h6 {
   color: rgb(0, 71, 88);
 }
 /* Estilos para o componente my-component */
-.my-component {
+.my-component, .component-react {
   padding: 10px;
   margin-bottom: 3%;
   width: 90%;
